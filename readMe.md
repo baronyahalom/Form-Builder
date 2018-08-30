@@ -9,11 +9,11 @@ Just go to the terminal and run
 ">nodemon app.js"
 
 You will need to make the next installs:
-npm install express
-npm install cors
-npm install body-parser
-npm install morgan
-npm install sqlite3
+npm install express,
+npm install cors,
+npm install body-parser,
+npm install morgan,
+npm install sqlite3,
 
 # Client Side
 for the client side I used AngularJS.
