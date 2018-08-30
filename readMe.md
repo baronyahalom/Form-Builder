@@ -8,10 +8,16 @@ Just go to the terminal and run
 >">cd server"
 ">nodemon app.js"
 
-if there is installs missinig 
+You will need to make the next installs:
+npm install express
+npm install cors
+npm install body-parser
+npm install morgan
+npm install sqlite3
 
 # Client Side
 for the client side I used AngularJS.
+For making it live, Just "go live" from WixPRO/index.html
 
 # Data Base
-for the data base I used SQLite
+for the data base I used SQLite - Need to be installedcha
