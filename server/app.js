@@ -3,7 +3,6 @@ const cors = require('cors');
 const sqlite = require('sqlite3').verbose();
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
-var jwt = require('jsonwebtoken');
 
 
 const app=express();

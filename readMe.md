@@ -5,6 +5,7 @@ Welcome to the Form Builder application exam. This app is simple, you can create
 # Server Side
 for the server side I used nodejs. 
 Just go to the terminal and run
+>>cd server
 >nodemon app.js
 
 # Client Side
