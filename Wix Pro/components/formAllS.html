@@ -1,0 +1,32 @@
+
+
+
+<div  ng-init="formAllSCtrl.getFormbyID()">
+                <center>
+                      <h8> Here is a list of all submitions</h8>
+                </center>
+              <div class="row">
+              <div class="col"></div>
+              <div class="col col-sm-12 col-md-8 col-table center">
+                <table class="table" id="tbl" >
+                   <thead>
+                      <tr id="row" >
+                                <th ng-repeat="col in feildsRow">
+                                <center><span  ng-bind="col" ></span></center></th>
+                      </tr>
+                    </thead>
+                  <tr ng-repeat="forms in fullFeilds" align="center">
+                                <td ng-repeat="a in forms">
+                                                <br/><br/><center>
+                                                  <span  ng-bind="a" ></span></center>
+                                </td>
+                  </tr>
+                </table>
+              </div>
+                 <div class="col"></div>
+              </div>
+              
+          
+          </div>
+          
+

@@ -1,0 +1,56 @@
+<div  ng-init="homeCtrl.getForms()">
+      <center>
+            <h8> Welcome </h8></br>
+            <h7> Here is a list of all forms</h7>
+      </center>
+    <div class="row">
+    <div class="col"></div>
+    <div class="col col-sm-12 col-md-8 col-table center">
+      <table class="table" id="tbl" >
+         <thead>
+            <tr id="row">
+              <th> <center>ID</center></th>
+              <th> <center>Form Name</center></th>
+              <th> <center>Number of Submitions</center></th>
+              <th> <center>Submit</center></th>
+              <th> <center>Submissions Page</center></th>
+            </tr>
+          </thead>
+        <tr ng-repeat="forms in homeCtrl.allForms" align="center">
+            <td>
+                <br/><br/><center>
+                  <span  ng-bind="forms.ID" ></span></center>
+            </td>
+            <td>
+                <br/><br/><center>
+                  <span  ng-bind="forms.formName" ></span></center>
+            </td>
+            <td>
+                <br/><br/><center>
+                  <span n  ng-bind="forms.amount" ></span></center>
+            </td>
+            <td>
+                <br/><br/><center>
+                  <span style="cursor: pointer;"  ng-click="homeCtrl.goTo(forms.ID)">Submit</span></center>
+            </td>
+            <td>
+                <br/><br/><center>
+                  <span style="cursor: pointer;"  ng-click="homeCtrl.goTo2(forms.ID)">View</span></center>
+            </td>
+        </tr>
+      </table>
+      <center>
+      <button class="button button2" ng-click="homeCtrl.goTo3()" >Click here for creating your own FORM</button>
+    </center>
+    </div>
+       <div class="col"></div>
+    </div>
+    
+
+</div>
+
+
+        
+           
+ 
+    

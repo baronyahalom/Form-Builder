@@ -1,0 +1,56 @@
+
+
+ <div class="page-header" >
+    <center><h8>Start making your form</h8></center>
+  </div>
+  <div id="all">
+      <div id="complete" >
+                 <b> choose field label:</b>
+                </br>
+                  <input type="text" ng-model="buildCtrl.fieldLbl" ng-change="changeFeild()" >
+                </br>
+                <b>choose input name:</b>
+                  <br>
+                  <input type="text" ng-model="buildCtrl.nameIn" ng-change="changeName()" >
+                </br>
+                <b>  choose input type: </b>
+                </br>
+                  <select ng-model="buildCtrl.typeIn" ng-change="changeType()">
+                  <option ng-repeat="x in buildCtrl.types">{{x}}</option>
+                  </select>
+                </br>
+                </br>
+                  <button class="btn btn-danger btn-lg pull-center" ng-click="addF()">Add Field</button>   
+      </div>
+  
+      <form  id="rcorners2" >
+            <div ng-if="fullFeilds.length>0">
+                <center><b><h7>{{$root.form}}</h7></b></center> 
+                    <div  ng-repeat="rev in fullFeilds">
+                            <b>{{rev.feild}}</b>
+                            </br>
+                            <input type={{rev.type}}  >        
+                    </div>   
+                    </br>
+                    <button class="btn btn-warning btn-lg pull-center"ng-if="$root.form.length==0" ng-click="open()">Next</button>
+            </div>
+            </br>
+            <center>      
+            <button class="btn btn-warning btn-lg pull-center" ng-if="$root.form.length>0" ng-click="save()">Save Form</button>
+            </center>
+        </form>
+</div>
+  
+  <script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3>Please choose a name for your form</h3>
+    </div>
+      <div class="modal-body">
+        <label>Form name:</label>
+        <input type="text" ng-model="formName" />
+      </div>
+      <div class="modal-footer">
+          <button class="btn btn-warning" ng-click="saveName()">Save Name</button>
+          <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
+      </div>
+</script>
