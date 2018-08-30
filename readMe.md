@@ -8,6 +8,8 @@ Just go to the terminal and run
 >>cd server
 >nodemon app.js
 
+if there is installs missinig 
+
 # Client Side
 for the client side I used AngularJS.
 

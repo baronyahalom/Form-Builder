@@ -23,13 +23,13 @@
                   <button class="btn btn-danger btn-lg pull-center" ng-click="addF()">Add Field</button>   
       </div>
   
-      <form  id="rcorners2" >
+      <form  id="rcorners2" ng-model="all" >
             <div ng-if="fullFeilds.length>0">
                 <center><b><h7>{{$root.form}}</h7></b></center> 
-                    <div  ng-repeat="rev in fullFeilds">
-                            <b>{{rev.feild}}</b>
+                    <div  ng-repeat="fi in fullFeilds" >
+                            <b>{{fi.feild}}</b>
                             </br>
-                            <input type={{rev.type}}  >        
+                            <input type={{fi.type}}  disabled>        
                     </div>   
                     </br>
                     <button class="btn btn-warning btn-lg pull-center"ng-if="$root.form.length==0" ng-click="open()">Next</button>
