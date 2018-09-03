@@ -9,39 +9,50 @@
                                                 <div  ng-repeat="form in fullFeilds" ng-name=fields>
                                                         
                                                         <div class="form-group" ng-if="form.type=='email'">
+                                                                        <ng-form name = "inForm">
                                                                         <label>{{form.feild}}</label></br>
                                                                         <input type="email" name="Email" ng-model="form.inputName" placeholder="yorEmail@here.com" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required>
-                                                                        <p ng-show="myForm.Email.$touched && myForm.Email.$error.required">You must enter an Email address</p>
-                                                                        <p ng-show="myForm.Email.$error.pattern">This is not a valid Email address</p>
-                                                        </div>
+                                                                        <p ng-show="inForm.Email.$touched && inForm.Email.$error.required">You must enter an Email address</p>
+                                                                        <p ng-show="inForm.Email.$error.pattern">This is not a valid Email address</p>
+                                                                        </ng-form>
+                                                                </div>
                                                         <div class="form-group" ng-if="form.type=='text'">
+                                                                <ng-form name = "inForm">
                                                                         <label>{{form.feild}}</label></br>
                                                                         <input type="text" name="text" ng-model="form.inputName" required>
-                                                                        <p ng-show="myForm.text.$touched  && myForm.text.$error.required">Don't leave this empty</p>
-                                                        </div>
+                                                                        <p ng-show="inForm.text.$touched  && inForm.text.$error.required">Don't leave this empty</p>
+                                                                </ng-form>
+                                                                </div>
                                                         <div class="form-group" ng-if="form.type=='date'">
+                                                                        <ng-form name = "inForm">
                                                                         <label>{{form.feild}}</label></br>
                                                                         <input type="date" name="date" ng-model="form.inputName" required>
-                                                                        <p ng-show="myForm.date.$touched  && myForm.date.$error.required">You must enter a date</p>
-                                                                        <p ng-if="myForm.date.$error.date" >Not a valid date</p>
-                                                        </div>
+                                                                        <p ng-show="inForm.date.$touched  && inForm.date.$error.required">You must enter a date</p>
+                                                                        <p ng-if="inForm.date.$error.date" >Not a valid date</p>
+                                                                        </ng-form>
+                                                                </div>
                                                         <div class="form-group" ng-if="form.type=='color'" >
+                                                                        <ng-form name = "inForm">
                                                                         <label>{{form.feild}}</label></br>
                                                                         <input type="color" name="color"  ng-model="form.inputName" >
-                                                                        
+                                                                        </ng-form>
                                                         </div>
                                                         <div class="form-group" ng-if="form.type=='tel'">
+                                                                        <ng-form name = "inForm">
                                                                         <label>{{form.feild}}</label></br>
                                                                         <input type="tel" name="tel" ng-model="form.inputName"  placeholder="XXX-XXXXXXX" ng-pattern="/^\+?\d{3}[- ]?\d{7}$/" required>
-                                                                        <p ng-show="myForm.tel.$touched  && myForm.tel.$error.required">You must enter a tel</p>
-                                                                        <p ng-if="myForm.tel.$error.pattern" >Not a valid tel</p>
-                                                        </div>
+                                                                        <p ng-show="inForm.tel.$touched  && inForm.tel.$error.required">You must enter a tel</p>
+                                                                        <p ng-if="inForm.tel.$error.pattern" >Not a valid tel</p>
+                                                                        </ng-form>
+                                                                </div>
                                                         <div class="form-group" ng-if="form.type=='number'">
+                                                                        <ng-form name = "inForm">
                                                                         <label>{{form.feild}}</label></br>
                                                                         <input type="number" name="number" ng-model="form.inputName" required>
-                                                                        <p ng-show="myForm.number.$touched  && myForm.number.$error.required">You must enter a number</p>
-                                                                        <p ng-if="myForm.number.$error.number" >Not a Number</p>
-                                                        </div>
+                                                                        <p ng-show="inForm.number.$touched  && inForm.number.$error.required">You must enter a number</p>
+                                                                        <p ng-if="inForm.number.$error.number" >Not a Number</p>
+                                                                        </ng-form>
+                                                                </div>
                                                 </div>   
                                                 </br>
                                                 <button type="submit" class="btn btn-warning btn-lg pull-center" ng-disabled="myForm.$invalid" ng-click="formSCtrl.submit()">Submit</button>
